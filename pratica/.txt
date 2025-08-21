@@ -1,0 +1,8 @@
+O NPM INIT - cria um projeto node dentro da pasta 
+PACKAGE.JSON 
+É O ARQUIVO QUE : 
+-gerencia o projeo e 
+-cria os ssripts
+-acessa informações sobre o projeto 
+-instala e remove bibliotecas 
+o NODE é a ferramenta intalada na máquina (servidor) executa o código javascript
