@@ -14,7 +14,7 @@ function aoQuadrado(a){
     return a * a
 }
 function raizQuadrada(a){
-    return a ** 0,5 
+    return Math.sqrt(a)
     //exponenciação
 }
 
