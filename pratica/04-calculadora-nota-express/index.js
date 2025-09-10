@@ -3,6 +3,12 @@ const express = require('express')
 //cria uma instancia
 const app = express()
 
+//importar o lib cors
+const cors = require('cors')
+//desabilita a configuração de cors 
+app.use(cors())
+//habilita o browser para mandar requisição para o seu backend local
+
 //middlewares
 app.use((req, res, next)=> {
     console.log("--------------#######------------")
@@ -16,13 +22,13 @@ app.get('/nome', (req, res, next ) => {
     //capturar informação do usuario 
     //vao vir atravez dos parametros da requisição (query params)
    const PrimeiroNome =  req.query.PrimeiroNome
-   const SegundoNome =  req.query.SegundoNome
+   const SobreNome =  req.query.SegundoNome
     res.send("Funcionou!!")
-    res.send("Olá " + primeiroNome + " " + sobreNome + "!!!") 
+    res.send("Olá " + PrimeiroNome + " " + SobreNome + "!!!") 
 })
 
 // Importando o router calculadora de nota
-const calculadoraNotaRouter = require('./routes/CalculadoraNota')
+const calculadoraNotaRouter = require('./routes/calculadoraNota')
 // Toda requisição que chegar na rota /calculadora vai para o router
 app.use('/calculadora', calculadoraNotaRouter)
 

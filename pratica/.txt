@@ -7,6 +7,7 @@ PACKAGE.JSON
 -instala e remove bibliotecas 
 o NODE é a ferramenta intalada na máquina (servidor) executa o código javascript
 PASSO A PASSO DA CRIAÇÃO DE UM PROJETO 
+
 npm init -y => inicia o projeto
 npm install express
 npm install --save-dev jest supertest nodemon
