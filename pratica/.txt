@@ -1,14 +1,21 @@
 O NPM INIT - cria um projeto node dentro da pasta 
+
 PACKAGE.JSON 
 É O ARQUIVO QUE : 
 -gerencia o projeo e 
 -cria os ssripts
 -acessa informações sobre o projeto 
 -instala e remove bibliotecas 
-o NODE é a ferramenta intalada na máquina (servidor) executa o código javascript
-PASSO A PASSO DA CRIAÇÃO DE UM PROJETO 
 
+o NODE é a ferramenta intalada na máquina (servidor) executa o código javascript
+
+PASSO A PASSO DA CRIAÇÃO DE UM PROJETO 
 npm init -y => inicia o projeto
 npm install express
 npm install --save-dev jest supertest nodemon
-criar o script de start e test 
+criar o script de start e test :
+"start": "nodemon index.js",
+    "test": "jest"
+
+git config --global user.name "Seu Nome"
+git config --global user.email "seuemail@example.com"
