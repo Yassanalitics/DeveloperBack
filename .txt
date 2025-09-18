@@ -1,0 +1,64 @@
+
+PASSO A PASSO DA CRIAÇÃO DE UM PROJETO 
+npm init -y => inicia o projeto
+npm install express
+npm install cors
+npm install --save-dev jest supertest nodemon
+criar o script de start e test :
+"start": "nodemon index.js",
+    "test": "jest"
+
+*********************************************************************************************************
+- Pasta routes para organizar as rotas e implementação, dntro do arquivo habilitar o roteador e o seu export 
+//Inicializar
+const express = require('express')
+const router = express.Router()
+
+//Mapear o roteador 
+
+
+
+//exportar o roteador 
+module.exports= router
+
+*********************************************************************************************************
+- index.js :
+//Inicializar
+const express = require("express")
+const app = express()
+
+//configurar e mapear intermediarios
+const cors = require('cors')
+app.use(cors()) //Habilita no cors no browser
+app.use(express.json()) //receber JSON no body da requisição
+
+//Mapeando routes 
+const exemploRouter = require ('./router/exemplo') importar o router que criou
+app.use(exemploRouter) este comando fara com que toda a aplicação passe por esse router após passar pelos midleweres
+
+//executar aplicação
+app.listen(3000, () => {
+    console.log("aplicação rodando em http://localhost:3000")
+})
+
+*********************************************************************************************************
+INFORMAÇÕES UTEIS 
+
+git config --global user.name "Seu Nome"
+git config --global user.email "seuemail@example.com"
+
+express → framework para criar rotas e servidor.
+cors → middleware para habilitar requisições de origens diferentes (muito comum em APIs).
+jest → para testes unitários.
+supertest → para testes de integração (rotas HTTP).
+nodemon → para reiniciar o servidor automaticamente quando salvar alterações.
+O NPM INIT - cria um projeto node dentro da pasta 
+
+PACKAGE.JSON 
+É O ARQUIVO QUE : 
+-gerencia o projeo e 
+-cria os ssripts
+-acessa informações sobre o projeto 
+-instala e remove bibliotecas 
+
+o NODE é a ferramenta intalada na máquina (servidor) executa o código javascript

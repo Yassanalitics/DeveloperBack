@@ -1,0 +1,24 @@
+Cadastro de pessoas CRUD
+
+id
+nome
+cpf 
+email
+datadeNAciemnto
+
+rota => /pessoas => identifica o recurso pessoa
+
+#Busca 
+GET /pessoas
+
+#Busca por ID
+ GET /pessoas/:id
+
+ #Criação
+ POST /pessoas
+
+ #Atualização
+ PUT ou PATCH /pessoas/:id
+
+#Remoção
+DELETE /pessoas/:id
