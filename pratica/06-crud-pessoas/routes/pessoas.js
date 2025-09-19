@@ -57,18 +57,28 @@ if(!pessoa){
 res.json(pessoa)
 })
 //criação POST/pessoas
-router.post('/pessoas', (req, res) => {
+router.post('/pessoas', (req, res, next) => {
     const { nome, cpf, email, dataNascimento } = req.body
   
     // validação simples
     if (!nome || !cpf || !email || !dataNascimento) {
       return res.status(400).json({ error: 'nome, cpf, email e dataNascimento são obrigatórios' })
     } 
-    const novoId = listaPessoas.length ? Math.max(...listaPessoas.map(p => p.id)) + 1 : 1
-    const novaPessoa = { id: novoId, nome, cpf, email, dataNascimento }
+    //validar se o cpf ja foi cadastrado 
+    if(listaPessoas.some(pessoa =>pessoa.cpf ==cpf)){
+      return res.status(400).json({ error: 'cpf duplicado' })
+    }   
+
+    const novaPessoa = { 
+      id: Date.now(), 
+      nome, 
+      cpf, 
+      email, 
+      dataNascimento 
+    }
     listaPessoas.push(novaPessoa)
   
-    res.status(201).json(novaPessoa)
+    res.status(201).json({message: "Pessoa cadastrada com sucesso", novaPessoa})
   })
   
 
