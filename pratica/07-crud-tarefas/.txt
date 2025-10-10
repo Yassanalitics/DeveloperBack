@@ -1,0 +1,7 @@
+-conferir se no repositorio tem  o .gitignore
+-cfonferir se no gitignore tem o ".env"
+Criar projeto:
+npm init -y
+npm install express nodemon dotenv mongoose
+crie o index.js
+adciona script d start no package.json "start":"nodemon index.js" 
