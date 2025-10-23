@@ -5,3 +5,4 @@ npm init -y
 npm install express nodemon dotenv mongoose
 crie o index.js
 adciona script d start no package.json "start":"nodemon index.js" 
+install yup para criar os validadores 

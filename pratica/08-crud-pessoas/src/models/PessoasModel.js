@@ -22,5 +22,5 @@ const schema = new mongoose.Schema(
     {timestamps: true} //salva a data de criação do registro e a data de atualizção do registro
 )
 //modelo
-const PessoaModel = mongoose.model('PessoaModel', 'Schema')
-module.exports = PessoaModel
+const PessoasModel = mongoose.model('PessoasModel', schema)
+module.exports = PessoasModel
