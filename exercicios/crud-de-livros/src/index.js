@@ -4,7 +4,7 @@ const dotenv = require('dotenv').config()
 
 const app = express()
 app.use(express.json())
-ç
+
 
 const DB_HOST=process.env.DB_HOST
 const DB_USER=process.env.DB_USER
@@ -19,10 +19,10 @@ mongoose.connect(url)
 .catch(err =>{
     console.log("erro ao conectar no banco MongoDB", err)
 })
-//controladores e rotas 
-const PessoaController = require('./controllers/PessoaController')
-app.use(PessoaController)
+const livroController = require('./controllers/LivroController')
+app.use(livroController)
 
+  
 app.listen(3000, () => {
     console.log("aplicação rodando em http://localhost:3000")
 })
