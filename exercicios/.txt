@@ -3,5 +3,8 @@
 Criar projeto:
 npm init -y
 npm install express nodemon dotenv mongoose yup
-crie o index.js
+crie o src
+crie o src/index.js
+dentro de sc crie aas pastas models, controllers e validators
 adciona script d start no package.json "start":"nodemon index.js"
+coloque o .env na rais do projeto 
