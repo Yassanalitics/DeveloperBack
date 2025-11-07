@@ -32,6 +32,12 @@ app.use(DepartamentoController);
 const FuncionarioController = require('./controllers/FuncionarioController');
 app.use(FuncionarioController);
 
+const ProjetoController = require('./controllers/ProjetoController');
+app.use(ProjetoController);
+
+const TarefaControlller = require('./controllers/TarefaController');
+app.use(TarefaControlller);
+
 app.listen(3000, () => {
-  console.log("API-EMPRESAS Rodando em http://localhost:3000")
+  console.log("api-empresas Rodando em http://localhost:3000")
 })
